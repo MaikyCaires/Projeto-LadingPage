@@ -1,0 +1,345 @@
+/* Fontes usadas */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+h2 {
+  font: normal 70px roboto;
+}
+p {
+  font: normal 20px quicksand;
+}
+/* geral */
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.container-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-roxo {
+  background-image: url(imagem/FotoEscura.png);
+  height: 100%;
+  min-height: 800px;
+  color: white;
+  padding: 50px;
+}
+.section-white {
+  background-color: white;
+  height: 100%;
+  color: black;
+  min-height: 800px;
+  padding: 50px;
+}
+
+/* Header */
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+.main-menu ul {
+  display: flex;
+}
+.main-menu ul li a {
+  display: block;
+  padding-right: 65px;
+  font-size: 20px;
+  color: black;
+  position: relative;
+  cursor: pointer;
+}
+.main-menu ul li a::after {
+  content: "";
+  border-bottom: solid 2px red;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  position: absolute;
+  transition: all 300ms ease-in-out;
+}
+.main-menu ul li a:hover::after {
+  width: 50%;
+}
+.main-header {
+  background-color: white;
+  height: 75px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+}
+.main-menu button {
+  border: none;
+  background-color: transparent;
+  color: rgb(185, 119, 230);
+  font-size: 50px;
+  position: absolute;
+  right: 30px;
+  display: none;
+  cursor: pointer;
+}
+/* sessão 1 roxo */
+.banner-js {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.banner-js img {
+  max-height: 70%;
+  border-radius: 20%;
+}
+.banner-js .january {
+  max-width: 600px;
+}
+.banner-js .baisebol {
+  max-width: 600px;
+}
+.banner-js h2 {
+  margin-bottom: 30px;
+  font-size: 80px;
+}
+.banner-js p {
+  font-size: 30px;
+}
+@media (max-width: 1230px) {
+  .banner-js .baisebol {
+    display: none;
+  }
+}
+/* sessão 2 white */
+.white-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.white-center p {
+  max-width: 800px;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 30px;
+  font: normal 25px quicksand;
+}
+.white-center h2 {
+  font: bold 80px roboto;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .container-content {
+    width: 300px;
+  }
+  .white-center p {
+    font: normal 20px quicksand;
+  }
+  /* galeria */
+  .img-item {
+    flex: 1 1 350px;
+  }
+  /* botão menu */
+  .main-header {
+    background-color: transparent;
+  }
+  .main-menu {
+    right: 0px;
+    top: 0;
+    position: absolute;
+    height: 800px;
+    width: 100%;
+    background-repeat: repeat;
+    align-items: unset;
+  }
+  .main-menu ul {
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    display: none;
+  }
+  .main-menu h1 {
+    display: none;
+  }
+  .main-menu button {
+    display: flex;
+    z-index: 1;
+  }
+  .main-menu ul li a:hover::after {
+    width: 100%;
+  }
+  .main-menu ul li a {
+    font: normal 30px roboto;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0;
+  }
+  button:hover {
+    color: yellow;
+  }
+  .main-menu button:focus ~ ul {
+    position: absolute;
+    display: flex;
+    background-image: url(imagem/foto\ de\ fundo\ menu.png);
+    height: 100%;
+    top: 0;
+    width: 100%;
+    align-items: center;
+  }
+}
+/* sessão 3 roxo */
+.section-three h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.section-three p {
+  margin-top: 20px;
+}
+.flex-jobs p {
+  font-size: 25px;
+}
+.flex-jobs h3 {
+  margin-top: 30px;
+}
+.flex-jobs {
+  margin-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.flex-jobs div {
+  max-width: 350px;
+}
+.flex-jobs h3 {
+  font: bold 30px roboto;
+}
+/*sessão 4 galeria white */
+.gallery-img {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.img-item img {
+  max-width: 100%;
+  border-radius: 8%;
+}
+.img-item {
+  flex: 1 1 360px;
+}
+/*sessão 5 tabela */
+.resp-tabela table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.resp-tabela {
+  overflow-x: auto;
+}
+.resp-tabela tbody tr td {
+  border-bottom: solid 1px black;
+}
+.resp-tabela tbody tr:nth-child(even) {
+  background-color: rgb(233, 226, 226);
+  border-bottom: solid 1px black;
+}
+.resp-tabela td {
+  padding: 30px;
+  font: normal 15px quicksand black;
+}
+.resp-tabela th {
+  background: #ccc;
+  padding: 0.75em;
+  text-align: left;
+  border-bottom: solid 2px black;
+  font: normal 25px roboto black;
+}
+table caption {
+  font: normal 35px roboto;
+  margin-bottom: 55px;
+  margin-top: 30px;
+}
+/* sessão 6 contato roxo */
+.flex-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.flex-contact div {
+  width: 600px;
+}
+.flex-contact img {
+  border-radius: 20%;
+  max-width: 100%;
+}
+.form-group input {
+  width: 100%;
+  padding: 28px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+.form-group {
+  margin-top: 20px;
+}
+.form-group input:focus,
+.full-width textarea:focus {
+  border: solid 3px royalblue;
+}
+.form-group button {
+  padding: 40px;
+  border-radius: 25px;
+  font: normal 20px roboto;
+  color: white;
+  background-color: transparent;
+  border: solid 2px white;
+  outline: none;
+  cursor: pointer;
+}
+.form-group button:hover {
+  color: black;
+  background-color: white;
+  transition: all 0.7s ease-in-out;
+}
+.flex-quest {
+  display: flex;
+  gap: 5px;
+  justify-content: space-around;
+}
+.flex-quest label,
+label {
+  font: normal 30px roboto;
+}
+
+legend {
+  font: normal 50px roboto;
+}
+.flex-quest div {
+  flex: 1 1 400px;
+}
+.full-width textarea {
+  width: 100%;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}
+.place-area::-webkit-input-placeholder {
+  padding-left: 16px;
+  font-size: 20px;
+}
+.place-input::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+/* footer */
+.main-footer {
+  text-align: center;
+  padding: 30px;
+}
+.main-footer p {
+  font: normal 20px black;
+}
